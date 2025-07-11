@@ -54,7 +54,7 @@ model = load_model("model.pkl")
 # Prediction
 if st.button("🔍 Predict Price"):
     if model is not None:
-        input_df = preprocess_input(location, area, bedrooms, bathrooms,H age)
+        input_df = preprocess_input(location, area, bedrooms, bathrooms,age)
         prediction = model.predict(input_df)
         st.success(f"estimated House Price:{round(prediction[0],2)} lakhs")
         
